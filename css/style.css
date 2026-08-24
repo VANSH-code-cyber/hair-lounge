@@ -466,15 +466,37 @@ a {
 
     background: #0d0d0d;
 
-    transition: 0.3s;
+    border-left: 2px solid rgba(212, 175, 55, 0.65);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+
+    cursor: pointer;
+}
+
+.service-card {
+    position: relative;
+
+    min-height: 230px;
+
+    padding: 35px;
+
+    background: #0d0d0d;
+
+    border-left: 2px solid rgba(212, 175, 55, 0.65);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
 
     cursor: pointer;
 }
 
 .service-card:hover {
     background: #151515;
+    border-left-color: var(--gold);
 }
-
 .service-number {
     color: var(--gold);
 
@@ -500,6 +522,225 @@ a {
 .featured-service {
     background: #131313;
 }
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    padding: 140px 8% 100px;
+
+    background: #080808;
+}
+
+
+/* ---------- HEADING ---------- */
+
+.contact-heading {
+    max-width: 800px;
+
+    margin-bottom: 80px;
+}
+
+.contact-heading h2 {
+    margin-top: 18px;
+
+    font-size: clamp(48px, 7vw, 88px);
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+    line-height: 0.95;
+}
+
+.contact-heading h2 span {
+    color: var(--gold);
+}
+
+.contact-heading > p:last-child {
+    max-width: 620px;
+
+    margin-top: 30px;
+
+    color: #888;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* ---------- CARDS ---------- */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #292929;
+    border-left: 1px solid #292929;
+}
+
+.contact-card {
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 38px;
+
+    background: #0d0d0d;
+
+    border-right: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.contact-card:hover {
+    background: #121212;
+
+    border-color: rgba(212, 175, 55, 0.35);
+}
+
+
+/* ---------- NUMBER ---------- */
+
+.contact-number {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+/* ---------- TITLE ---------- */
+
+.contact-card h3 {
+    margin-top: 55px;
+
+    font-size: 25px;
+}
+
+.contact-card p {
+    margin-top: 18px;
+
+    color: #888;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ---------- LINKS ---------- */
+
+.contact-link {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid var(--gold);
+
+    padding-bottom: 6px;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--gold);
+}
+
+
+/* ---------- FEATURED CARD ---------- */
+
+.contact-featured {
+    background: #111;
+}
+
+.contact-featured::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: var(--gold);
+}
+
+
+/* ---------- STATUS ---------- */
+
+.contact-status {
+    display: block;
+
+    margin-top: 28px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+
+/* ---------- ACTIONS ---------- */
+
+.contact-actions {
+    display: flex;
+
+    gap: 28px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ---------- BOTTOM LINE ---------- */
+
+.contact-bottom {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 80px;
+}
+
+.contact-bottom p {
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    white-space: nowrap;
+}
+
+.contact-line {
+    height: 1px;
+
+    flex: 1;
+
+    background: #242424;
+}
+
+
 
 
 /* =========================================
@@ -539,6 +780,22 @@ a {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+@media (max-width: 900px) {
+
+    .contact-section {
+        padding: 100px 7%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        min-height: 270px;
+    }
+
 }
 
 
@@ -613,6 +870,64 @@ a {
         margin-top: 35px;
     }
 }
+
+.contact-section {
+    padding: 90px 6%;
+}
+
+.contact-heading {
+    margin-bottom: 55px;
+}
+
+.contact-heading h2 {
+    font-size: clamp(44px, 12vw, 64px);
+
+    letter-spacing: -2px;
+}
+
+.contact-heading > p:last-child {
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.contact-card {
+    min-height: 250px;
+
+    padding: 30px;
+}
+
+.contact-card h3 {
+    margin-top: 45px;
+
+    font-size: 22px;
+}
+
+.contact-card p {
+    font-size: 14px;
+}
+
+.contact-actions {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 4px;
+}
+
+.contact-bottom {
+    margin-top: 60px;
+
+    gap: 15px;
+}
+
+.contact-bottom p {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
 
 /* MOBILE MENU */
 
@@ -838,6 +1153,584 @@ section {
 
     .gallery-overlay {
         opacity: 1;
+    }
+
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-section {
+    padding: 120px 8%;
+    background: #050505;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    background: #111;
+}
+
+.about-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        transparent 55%,
+        rgba(0, 0, 0, 0.45)
+    );
+
+    pointer-events: none;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-content {
+    max-width: 560px;
+}
+
+.about-content h2 {
+    margin-bottom: 28px;
+}
+
+.about-lead {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #fff;
+    margin-bottom: 22px;
+}
+
+.about-content > p:not(.about-lead):not(.section-eyebrow):not(.about-signature) {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #aaa;
+}
+
+.about-line {
+    width: 55px;
+    height: 1px;
+    background: var(--gold);
+    margin: 35px 0 25px;
+}
+
+.about-signature {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about-signature span {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   ABOUT RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 90px 6%;
+    }
+
+    .about-image {
+        max-width: 520px;
+    }
+
+    .about-content {
+        max-width: none;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .about-section {
+        padding: 80px 6%;
+        gap: 35px;
+    }
+
+    .about-image {
+        aspect-ratio: 4 / 5;
+    }
+
+    .about-lead {
+        font-size: 18px;
+    }
+
+}
+
+/* =========================================
+   CREDENTIALS
+========================================= */
+
+.credentials-section {
+    padding: 140px 8%;
+    background: #080808;
+}
+
+.credentials-content {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 90px;
+
+    align-items: center;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   CREDENTIALS COPY
+========================================= */
+
+.credentials-copy {
+    max-width: 520px;
+}
+
+.credentials-copy h2 {
+    margin-top: 18px;
+
+    font-size: clamp(48px, 5vw, 76px);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    font-weight: 800;
+}
+
+.credentials-copy h2 span {
+    color: var(--gold);
+}
+
+.credentials-description {
+    margin-top: 35px;
+
+    max-width: 450px;
+
+    color: #999;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CREDENTIAL DETAILS
+========================================= */
+
+.credential-details {
+    margin-top: 50px;
+}
+
+.credential-line {
+    width: 70px;
+
+    height: 2px;
+
+    background: var(--gold);
+
+    margin-bottom: 28px;
+}
+
+.credential-details h3 {
+    font-size: 22px;
+
+    font-weight: 500;
+}
+
+.credential-details p {
+    margin-top: 10px;
+
+    color: #777;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+}
+
+.credential-details span {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
+   CERTIFICATE DISPLAY
+========================================= */
+
+.certificate-display {
+    position: relative;
+
+    width: 100%;
+}
+
+.certificate-frame {
+    position: relative;
+
+    padding: 14px;
+
+    background: #111;
+
+    border: 1px solid #2a2a2a;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.55);
+
+    transition:
+        transform 0.5s ease,
+        border-color 0.5s ease;
+}
+
+.certificate-frame::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 5px;
+
+    border: 1px solid rgba(212, 175, 55, 0.35);
+
+    pointer-events: none;
+}
+
+.certificate-frame img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.certificate-frame:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(212, 175, 55, 0.45);
+}
+
+.certificate-caption {
+    margin-top: 18px;
+
+    color: #666;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-align: right;
+}
+
+
+/* =========================================
+   CREDENTIALS RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .credentials-section {
+        padding: 100px 7%;
+    }
+
+    .credentials-content {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .credentials-copy {
+        max-width: 650px;
+    }
+
+    .certificate-display {
+        max-width: 800px;
+
+        margin: 0 auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .credentials-section {
+        padding: 90px 6%;
+    }
+
+    .credentials-copy h2 {
+        font-size: clamp(44px, 13vw, 64px);
+
+        letter-spacing: -2px;
+    }
+
+    .credentials-description {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .credential-details {
+        margin-top: 40px;
+    }
+
+    .certificate-frame {
+        padding: 8px;
+    }
+
+    .certificate-frame::before {
+        inset: 4px;
+    }
+
+    .certificate-caption {
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+}
+
+/* =========================================
+   THE LOUNGE
+========================================= */
+
+.lounge-section {
+    padding: 120px 8%;
+    background: #050505;
+}
+
+.lounge-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-auto-rows: 360px;
+
+    gap: 12px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+.lounge-item {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+.lounge-featured {
+    grid-row: span 2;
+}
+
+.lounge-item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+
+/* =========================================
+   LOUNGE LABEL
+========================================= */
+
+.lounge-label {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            transparent 45%,
+            rgba(0, 0, 0, 0.8)
+        );
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+}
+
+.lounge-label span {
+    color: var(--gold);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.lounge-label h3 {
+    margin-top: 7px;
+
+    font-size: 21px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   LOUNGE HOVER
+========================================= */
+
+.lounge-item:hover img {
+    transform: scale(1.06);
+
+    filter: brightness(0.72);
+}
+
+.lounge-item:hover .lounge-label {
+    opacity: 1;
+}
+
+
+/* =========================================
+   LOUNGE RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .lounge-section {
+        padding: 100px 6%;
+    }
+
+    .lounge-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-auto-rows: 300px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .lounge-section {
+        padding: 80px 6%;
+    }
+
+    .lounge-grid {
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 380px;
+
+        gap: 10px;
+    }
+
+    .lounge-featured {
+        grid-row: span 1;
+    }
+
+    .lounge-label {
+        opacity: 1;
+
+        padding: 18px;
+    }
+
+    .lounge-label span {
+        font-size: 8px;
+    }
+
+    .lounge-label h3 {
+        font-size: 17px;
+    }
+
+}
+
+.footer-credit {
+    margin-top: 35px;
+    padding-bottom: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    color: #555;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.designer-credit {
+    color: #777;
+
+    padding-left: 18px;
+
+    border-left: 1px solid #292929;
+
+    transition: color 0.3s ease;
+}
+
+.designer-credit:hover {
+    color: #aaa;
+}
+
+
+@media (max-width: 600px) {
+
+    .footer-credit {
+        margin-top: 30px;
+        padding-bottom: 22px;
+
+        gap: 12px;
+
+        font-size: 7px;
+        letter-spacing: 1.5px;
+    }
+
+    .designer-credit {
+        padding-left: 12px;
     }
 
 }
