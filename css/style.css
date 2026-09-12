@@ -1392,9 +1392,21 @@ section {
 
 .certificate-display {
     position: relative;
+    width: 100%;
 
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.certificate-item {
     width: 100%;
 }
+
+.credential-second {
+    margin-top: 45px;
+}
+
 
 .certificate-frame {
     position: relative;
@@ -1504,8 +1516,17 @@ section {
     }
 
     .credential-details {
-        margin-top: 40px;
-    }
+    margin-top: 40px;
+}
+
+.credential-second {
+    margin-top: 45px;
+}
+
+.certificate-display {
+    gap: 40px;
+}
+
 
     .certificate-frame {
         padding: 8px;
